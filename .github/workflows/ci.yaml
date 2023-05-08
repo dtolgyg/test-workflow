@@ -17,4 +17,4 @@ jobs:
 
         - name: lint Dockerfile
           run: >
-            docker run --rm -i -v ./.hadolint.yaml:/.config/hadolint.yaml hadolint/hadolint < Dockerfile
+            docker run --rm -i -v hadolint.yaml:/.config/hadolint.yaml hadolint/hadolint < Dockerfile
