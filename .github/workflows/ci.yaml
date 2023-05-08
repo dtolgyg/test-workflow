@@ -20,4 +20,3 @@ jobs:
           with:
             dockerfile: Dockerfile
             config: ./.hadolint.yaml
-            failure-threshold: error
