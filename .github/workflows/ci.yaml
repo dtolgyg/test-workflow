@@ -33,6 +33,6 @@ jobs:
         
         - name: build Docker container
           if: github.event_name != 'pull_request'
-          run: >
+          run: |
             docker build .
             docker system df
