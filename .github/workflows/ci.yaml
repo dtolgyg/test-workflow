@@ -16,5 +16,7 @@ jobs:
           uses: docker/setup-buildx-action@v2
 
         - name: lint Dockerfile
-          run: >
-            docker run --rm -i -v hadolint.yaml:/.config/hadolint.yaml hadolint/hadolint < Dockerfile
+          uses: hadolint/hadolint-action@v3.1.0
+          with:
+            dockerfile: Dockerfile
+            failure-threshold: error
