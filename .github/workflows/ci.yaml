@@ -20,3 +20,13 @@ jobs:
           with:
             dockerfile: Dockerfile
             failure-threshold: error
+            recursive: false
+            output-file: /dev/stdout
+            no-color: false
+            no-fail: false
+            verbose: false
+            format: tty
+        
+        - name: build Docker container
+          run: >
+            docker build .
