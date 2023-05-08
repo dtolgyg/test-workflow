@@ -16,7 +16,5 @@ jobs:
           uses: docker/setup-buildx-action@v2
 
         - name: lint Dockerfile
-          uses: hadolint/hadolint-action@v3.1.0
-          with:
-            dockerfile: Dockerfile
-            config: ./.hadolint.yaml
+          run: >
+            docker run --rm -i -v ./.hadolint.yaml:/.config/hadolint.yaml hadolint/hadolint < Dockerfile
